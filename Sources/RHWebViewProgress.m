@@ -58,7 +58,6 @@ static const CFTimeInterval loadingCompletedDuration = 0.1;
     _progressBarView.strokeColor = tintColor.CGColor;
     _progressBarView.fillColor = [UIColor clearColor].CGColor;
     _progressBarView.lineWidth = defalutLineHeight;
-    _progressBarView.opacity = 1;
     
     [self.layer addSublayer:_progressBarView];
 }
@@ -68,7 +67,7 @@ static const CFTimeInterval loadingCompletedDuration = 0.1;
 }
 
 - (void)displayStartAnimation {
-    
+    _progressBarView.opacity = 1;
     float scale = self.simulatedProgress > 0 ?self.simulatedProgress:0.95;
     CGPoint p1 = CGPointMake(0,defalutLineHeight / 2);
     CGPoint p2 = CGPointMake(self.bounds.size.width * scale,defalutLineHeight / 2);
