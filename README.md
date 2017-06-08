@@ -7,5 +7,5 @@ a tool for WebView loading to display  progress<br>
 [![Laguage](https://img.shields.io/badge/language-ObjC%20%26%20Swift-orange.svg)](https://github.com/cochat/RHWebViewProgress)
 [![CocoaPods](https://img.shields.io/cocoapods/dt/RHWebViewProgress.svg)](https://cocoapods.org/pods/RHWebViewProgress)
 ![Platform](http://cocoapod-badges.herokuapp.com/p/RHWebViewProgress/badge.png)&nbsp;
-[![GitHub stars](https://img.shields.io/github/stars/cochat/RHWebViewProgress.svg?style=social&label=Star)](https://github.com/cochat/RHWebViewProgress)&nbsp
+[![GitHub stars](https://img.shields.io/github/stars/cochat/RHWebViewProgress.svg?style=social&label=Star)](https://github.com/cochat/RHWebViewProgress)
 
