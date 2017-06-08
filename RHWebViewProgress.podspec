@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.author           = { "yuhechuan" => "yuhechuan@ruaho.com" }
   s.social_media_url = "http://www.jianshu.com/u/7c43d8cb3cff"
 
-  s.frameworks = 'QuartzCore'                 
+  s.frameworks = 'QuartzCore.frameworks'                 
 
 
 end
