@@ -11,6 +11,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.author           = { "yuhechuan" => "yuhechuan@ruaho.com" }
-  s.social_media_url = "http://www.jianshu.com/u/7c43d8cb3cff"              
 
 end
