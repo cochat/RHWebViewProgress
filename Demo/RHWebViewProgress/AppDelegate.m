@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "RHBaseViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    RHBaseViewController *baseVC = [[RHBaseViewController alloc]init];
+    UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:baseVC];
+    self.window.rootViewController = nc;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

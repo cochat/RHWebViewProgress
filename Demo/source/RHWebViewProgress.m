@@ -6,7 +6,7 @@
 //  Copyright © 2017年 玉河川. All rights reserved.
 //
 
-#import "YCWebViewProgress.h"
+#import "RHWebViewProgress.h"
 
 static const CGFloat defalutLineHeight = 3.0;
 
@@ -14,7 +14,7 @@ static const CFTimeInterval loadingStartDuration = 15.0;
 
 static const CFTimeInterval loadingCompletedDuration = 0.1;
 
-@interface YCWebViewProgress ()<CAAnimationDelegate>
+@interface RHWebViewProgress ()<CAAnimationDelegate>
 
 @property (nonatomic, strong) CAShapeLayer *progressBarView;
 
@@ -23,7 +23,7 @@ static const CFTimeInterval loadingCompletedDuration = 0.1;
 
 @end
 
-@implementation YCWebViewProgress
+@implementation RHWebViewProgress
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -58,7 +58,6 @@ static const CFTimeInterval loadingCompletedDuration = 0.1;
     _progressBarView.strokeColor = tintColor.CGColor;
     _progressBarView.fillColor = [UIColor clearColor].CGColor;
     _progressBarView.lineWidth = defalutLineHeight;
-    _progressBarView.opacity = 1;
     
     [self.layer addSublayer:_progressBarView];
 }
@@ -68,7 +67,7 @@ static const CFTimeInterval loadingCompletedDuration = 0.1;
 }
 
 - (void)displayStartAnimation {
-    
+    _progressBarView.opacity = 1;
     float scale = self.simulatedProgress > 0 ?self.simulatedProgress:0.95;
     CGPoint p1 = CGPointMake(0,defalutLineHeight / 2);
     CGPoint p2 = CGPointMake(self.bounds.size.width * scale,defalutLineHeight / 2);
@@ -78,7 +77,7 @@ static const CFTimeInterval loadingCompletedDuration = 0.1;
 }
 
 - (void)displayCompletedAnimation:(float)progress{
-    
+
     CGPoint p1 = CGPointMake(0,1.5);
     CGPoint p2 = CGPointMake(self.bounds.size.width * progress,defalutLineHeight / 2);
     _simulatedDuration = loadingCompletedDuration;

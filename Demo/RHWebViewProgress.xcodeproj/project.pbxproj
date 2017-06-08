@@ -11,7 +11,9 @@
 		18330B9E1EE8EA4F00BAD0B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18330B9D1EE8EA4F00BAD0B6 /* AppDelegate.m */; };
 		18330BA61EE8EA4F00BAD0B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18330BA51EE8EA4F00BAD0B6 /* Assets.xcassets */; };
 		18330BCE1EE8EA9200BAD0B6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18330BCD1EE8EA9200BAD0B6 /* QuartzCore.framework */; };
-		18330BD21EE8EC7400BAD0B6 /* YCWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 18330BD11EE8EC7400BAD0B6 /* YCWebViewProgress.m */; };
+		18330BD21EE8EC7400BAD0B6 /* RHWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 18330BD11EE8EC7400BAD0B6 /* RHWebViewProgress.m */; };
+		18330C141EE911A900BAD0B6 /* RHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18330C131EE911A900BAD0B6 /* RHBaseViewController.m */; };
+		18330C171EE911D100BAD0B6 /* RHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18330C161EE911D100BAD0B6 /* RHButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +43,12 @@
 		18330BAF1EE8EA4F00BAD0B6 /* RHWebViewProgressTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RHWebViewProgressTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18330BBA1EE8EA4F00BAD0B6 /* RHWebViewProgressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RHWebViewProgressUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18330BCD1EE8EA9200BAD0B6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		18330BD01EE8EC7400BAD0B6 /* YCWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCWebViewProgress.h; sourceTree = "<group>"; };
-		18330BD11EE8EC7400BAD0B6 /* YCWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCWebViewProgress.m; sourceTree = "<group>"; };
+		18330BD01EE8EC7400BAD0B6 /* RHWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHWebViewProgress.h; sourceTree = "<group>"; };
+		18330BD11EE8EC7400BAD0B6 /* RHWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHWebViewProgress.m; sourceTree = "<group>"; };
+		18330C121EE911A900BAD0B6 /* RHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHBaseViewController.h; sourceTree = "<group>"; };
+		18330C131EE911A900BAD0B6 /* RHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHBaseViewController.m; sourceTree = "<group>"; };
+		18330C151EE911D100BAD0B6 /* RHButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHButton.h; sourceTree = "<group>"; };
+		18330C161EE911D100BAD0B6 /* RHButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,10 @@
 		18330B981EE8EA4F00BAD0B6 /* RHWebViewProgress */ = {
 			isa = PBXGroup;
 			children = (
+				18330C151EE911D100BAD0B6 /* RHButton.h */,
+				18330C161EE911D100BAD0B6 /* RHButton.m */,
+				18330C121EE911A900BAD0B6 /* RHBaseViewController.h */,
+				18330C131EE911A900BAD0B6 /* RHBaseViewController.m */,
 				18330B9C1EE8EA4F00BAD0B6 /* AppDelegate.h */,
 				18330B9D1EE8EA4F00BAD0B6 /* AppDelegate.m */,
 				18330BA51EE8EA4F00BAD0B6 /* Assets.xcassets */,
@@ -122,8 +132,8 @@
 		18330BCF1EE8EC7400BAD0B6 /* source */ = {
 			isa = PBXGroup;
 			children = (
-				18330BD01EE8EC7400BAD0B6 /* YCWebViewProgress.h */,
-				18330BD11EE8EC7400BAD0B6 /* YCWebViewProgress.m */,
+				18330BD01EE8EC7400BAD0B6 /* RHWebViewProgress.h */,
+				18330BD11EE8EC7400BAD0B6 /* RHWebViewProgress.m */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -262,7 +272,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18330BD21EE8EC7400BAD0B6 /* YCWebViewProgress.m in Sources */,
+				18330C171EE911D100BAD0B6 /* RHButton.m in Sources */,
+				18330BD21EE8EC7400BAD0B6 /* RHWebViewProgress.m in Sources */,
+				18330C141EE911A900BAD0B6 /* RHBaseViewController.m in Sources */,
 				18330B9E1EE8EA4F00BAD0B6 /* AppDelegate.m in Sources */,
 				18330B9B1EE8EA4F00BAD0B6 /* main.m in Sources */,
 			);

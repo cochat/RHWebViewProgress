@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YCWebViewProgress : UIView
+@interface RHWebViewProgress : UIView
 
 /* The basic progress of the object. Defaults to 0.0 */
 
