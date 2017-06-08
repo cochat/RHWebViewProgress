@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.author           = { "yuhechuan" => "yuhechuan@ruaho.com" }
   s.social_media_url = "http://www.jianshu.com/u/7c43d8cb3cff"
 
-  s.frameworks = 'QuartzCore'                  #所需的framework，多个用逗号隔开
+  s.frameworks = 'QuartzCore'                 
 
 
 end
