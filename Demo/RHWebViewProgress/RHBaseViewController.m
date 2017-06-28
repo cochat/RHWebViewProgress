@@ -12,6 +12,8 @@
 
 @interface RHBaseViewController ()
 
+@property (nonatomic, strong) RHButton *display;
+@property (nonatomic, strong) RHButton *loading;
 @property (nonatomic, strong) RHWebViewProgress *progressView;
 
 @end
@@ -34,28 +36,56 @@
     CGFloat x = (self.view.bounds.size.width - width) / 2.0;
     CGFloat y1 = 200;
     CGFloat y2 = y1 + height + 20;
-    RHButton *display = [[RHButton alloc]initWithFrame:CGRectMake(x, y1, width, height)];
-    display.title = @"演示";
-    display.buttonColor = [UIColor colorWithRed:70 / 225.0 green:187 / 255.0 blue:38 / 255.0 alpha:1];
-    display.operation = ^{
-        [self displayAnimation];
+    _display = [[RHButton alloc]initWithFrame:CGRectMake(x, y1, width, height)];
+    _display.title = @"演示";
+    _display.buttonColor = [UIColor colorWithRed:70 / 225.0 green:187 / 255.0 blue:38 / 255.0 alpha:1];
+    typeof(self) __weak weakSelf = self;
+    _display.operation = ^{
+        [weakSelf displayAnimation];
     };
-    RHButton *loading = [[RHButton alloc]initWithFrame:CGRectMake(x, y2, width, height)];
-    loading.title = @"加载完成";
-    loading.buttonColor = [UIColor redColor];
-    loading.operation = ^{
-        [self loadingAnimation];
+    _loading = [[RHButton alloc]initWithFrame:CGRectMake(x, y2, width, height)];
+    _loading.title = @"加载完成";
+    _loading.buttonColor = [UIColor redColor];
+    _loading.operation = ^{
+        [weakSelf loadingAnimation];
     };
-    [self.view addSubview:display];
-    [self.view addSubview:loading];
+    [self.view addSubview:_display];
+    [self.view addSubview:_loading];
 }
 
 - (void)displayAnimation {
-    [self.progressView displayStartAnimation];
+    UIViewAnimationOptions op = UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAllowAnimatedContent | UIViewAnimationOptionBeginFromCurrentState;
+    [UIView animateWithDuration:0.1 delay:0 options:op animations:^{
+        [_display.layer setValue:@(0.97) forKeyPath:@"transform.scale"];
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.1 delay:0 options:op animations:^{
+             [_display.layer setValue:@(1.008) forKeyPath:@"transform.scale"];
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.1 delay:0 options:op animations:^{
+                [_display.layer setValue:@(1.008) forKeyPath:@"transform.scale"];
+            } completion:^(BOOL finished) {
+                [self.progressView displayStartAnimation];
+            }];
+        }];
+    }];
 }
 
 - (void)loadingAnimation {
-    [self.progressView setProgress:1.0];
+    UIViewAnimationOptions op = UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAllowAnimatedContent | UIViewAnimationOptionBeginFromCurrentState;
+    [UIView animateWithDuration:0.1 delay:0 options:op animations:^{
+        [_loading.layer setValue:@(0.97) forKeyPath:@"transform.scale"];
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.1 delay:0 options:op animations:^{
+            [_loading.layer setValue:@(1.008) forKeyPath:@"transform.scale"];
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.1 delay:0 options:op animations:^{
+                [_loading.layer setValue:@(1.008) forKeyPath:@"transform.scale"];
+            } completion:^(BOOL finished) {
+                [self.progressView setProgress:1.0];
+            }];
+        }];
+    }];
+    
 }
 
 - (RHWebViewProgress *)progressView {
