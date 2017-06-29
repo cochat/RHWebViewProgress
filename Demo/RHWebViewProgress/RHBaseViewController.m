@@ -62,7 +62,7 @@
              [_display.layer setValue:@(1.008) forKeyPath:@"transform.scale"];
         } completion:^(BOOL finished) {
             [UIView animateWithDuration:0.1 delay:0 options:op animations:^{
-                [_display.layer setValue:@(1.008) forKeyPath:@"transform.scale"];
+                [_display.layer setValue:@(1) forKeyPath:@"transform.scale"];
             } completion:^(BOOL finished) {
                 [self.progressView displayStartAnimation];
             }];
@@ -79,7 +79,7 @@
             [_loading.layer setValue:@(1.008) forKeyPath:@"transform.scale"];
         } completion:^(BOOL finished) {
             [UIView animateWithDuration:0.1 delay:0 options:op animations:^{
-                [_loading.layer setValue:@(1.008) forKeyPath:@"transform.scale"];
+                [_loading.layer setValue:@(1) forKeyPath:@"transform.scale"];
             } completion:^(BOOL finished) {
                 [self.progressView setProgress:1.0];
             }];
